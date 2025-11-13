@@ -1,7 +1,7 @@
 import app from "../lib/app"
 import type { PatchUser, PostUser, publicUser } from "../types/user";
 
-export async function fetchUsers(): Promise<publicUser[]>{
+export async function getUsers(): Promise<publicUser[]>{
     const res = await app.get("/users");
     return res.data
 }
